@@ -52,7 +52,7 @@ function Login() {
                 console.log("Error: ", error);
                 if (error.response && error.response.status === 401) {
                     console.log(error.response.data);
-                    navigate('/');
+                    navigate('/Home');
                 }
             }
             finally {
