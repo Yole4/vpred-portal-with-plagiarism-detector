@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom';
 import '../App.css';
 import axios from 'axios';
+import BackEndUrl from '../backend URL/BackEndUrl';
 // import { useCookies } from 'react-cookie';
 // import { response } from 'express';
 
 
 function Login() {
-
+    // get backend URL
+    const backendUrl = BackEndUrl();
     const navigate = useNavigate();
 
     // check if the user is already login or not
@@ -17,7 +19,7 @@ function Login() {
     useEffect(() => {
         async function fetchProtected() {
             try {
-                const response = await axios.get('http://localhost:3001/protected', {
+                const response = await axios.get(`${backendUrl}/protected`, {
                     headers: {
                         'Authorization': `Bearer ${token}`
                     }
@@ -98,7 +100,7 @@ function Login() {
         const data = { email, password };
 
         try {
-            const response = await axios.post('http://localhost:3001/login', data);
+            const response = await axios.post(`${backendUrl}/login`, data);
             if (response.status === 200) {
                 const token = response.data.token;
 
@@ -160,7 +162,7 @@ function Login() {
 
     //     // const data = { lname, fname, mname, username, newPass, conPass };
 
-    //     axios.post('http://localhost:3001/register', formData, {
+    //     axios.post('${backendUrl}/register', formData, {
     //         headers: {
     //             'Content-Type': 'multipart/form-data'
     //         },
