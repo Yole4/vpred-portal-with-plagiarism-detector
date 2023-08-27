@@ -5,7 +5,7 @@ import axios from 'axios';
 import BackEndUrl from './backend URL/BackEndUrl';
 // import { useCookies } from 'react-cookie';
 // import { response } from 'express';
-
+navigate('/unitHead-homePage');
 
 function Login() {
     // get backend URL
@@ -13,7 +13,6 @@ function Login() {
     const navigate = useNavigate();
 
     // check if the user is already login or not
-    const [loading, setLoading] = useState(true);
     const token = localStorage.getItem('token');
 
     useEffect(() => {
@@ -52,19 +51,12 @@ function Login() {
                 console.log("Error: ", error);
                 if (error.response && error.response.status === 401) {
                     console.log(error.response.data);
-                    navigate('/Home');
+                    navigate('/');
                 }
-            }
-            finally {
-                setLoading(false);
             }
         }
         fetchProtected();
     }, []);
-
-    if (loading) {
-        <div>Loading...</div>
-    }
 
     // end of checking if the user is login or not
 
