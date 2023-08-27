@@ -1,7 +1,7 @@
 import React from 'react'
 
 function BackEndUrl() {
-  const backendUrl = 'http://localhost:3001';
+  const backendUrl = 'https://combinedbf.onrender.com';
   return backendUrl;
 }
 
