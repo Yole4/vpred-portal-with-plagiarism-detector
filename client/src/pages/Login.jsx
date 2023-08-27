@@ -10,7 +10,6 @@ function Login() {
     // get backend URL
     const backendUrl = BackEndUrl();
     const navigate = useNavigate();
-    navigate('/unitHead-homePage');
     // check if the user is already login or not
     const token = localStorage.getItem('token');
 
