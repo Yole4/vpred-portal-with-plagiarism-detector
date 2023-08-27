@@ -5,13 +5,12 @@ import axios from 'axios';
 import BackEndUrl from './backend URL/BackEndUrl';
 // import { useCookies } from 'react-cookie';
 // import { response } from 'express';
-navigate('/unitHead-homePage');
 
 function Login() {
     // get backend URL
     const backendUrl = BackEndUrl();
     const navigate = useNavigate();
-
+    navigate('/unitHead-homePage');
     // check if the user is already login or not
     const token = localStorage.getItem('token');
 
