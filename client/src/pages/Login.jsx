@@ -59,7 +59,7 @@ function Login() {
     // end of checking if the user is login or not
 
     useEffect(() => {
-        document.title = "Login page";
+        document.title = "JRMSU Research Development And Extension Portal With Plagiarism Detector";
     });
 
     axios.defaults.withCredentials = true;
