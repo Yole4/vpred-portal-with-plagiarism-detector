@@ -220,8 +220,7 @@ function AddAccount() {
     const [listChairperson, setListChairperson] = useState([]);
     const [searchList, setSearchList] = useState('');
 
-    useEffect(() => {
-        const fetchUHAccount = async () => {
+ 
             try {
                 const response = await axios.get(`${backendUrl}/fetch/all-chairperson`, {
                     headers: {
@@ -240,8 +239,6 @@ function AddAccount() {
                 }
             }
         }
-        fetchUHAccount();
-    }, []);
 
     // on search on table
     const filteredList = listChairperson.filter(item =>
