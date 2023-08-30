@@ -45,10 +45,10 @@ function MainContent() {
 
   const location = useLocation();
   const isLogin = location.pathname === '/';
-  const isAdmin = location.pathname === '/Home';
-  const isAuthor = location.pathname === '/author-homePage';
-  const isChairperson = location.pathname === '/chairperson-homePage';
-  const isUnitHead = location.pathname === '/unitHead-homePage';
+  const isAdmin = location.pathname === '/Home' || location.pathname === "/Admin-unit-head" || location.pathname === "/Admin-chairperson" || location.pathname === "/Admin-author" || location.pathname === "/Admin-all-RorE" || location.pathname === "/Admin-public";
+  const isAuthor = location.pathname === '/author-homePage' || location.pathname === "/author-public-works" || location.pathname === "/author-myWorks";
+  const isChairperson = location.pathname === '/chairperson-homePage' || location.pathname === "/chairperson-author-account" || location.pathname === "/chairperson-public-RorE" || location.pathname === "/chairperson-RorE-Works";
+  const isUnitHead = location.pathname === '/unitHead-homePage' || location.pathname === '/unitHead-author-account' || location.pathname === '/unitHead-chairperson-account' || location.pathname === '/unitHead-public-RorE' || location.pathname === '/unitHead-RorE-Works';
 
   const isValidPath = isLogin || isAdmin || isAuthor || isChairperson || isUnitHead;
 
