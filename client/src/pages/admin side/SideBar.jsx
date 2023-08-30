@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import BackEndUrl from '../backend URL/BackEndUrl';
+import '../../../App.css';
 
 function SideBar() {
 
@@ -61,10 +62,10 @@ function SideBar() {
         <div>
             <aside className="main-sidebar sidebar-dark-primary elevation-4">
                 {/* Brand Logo */}
-                <a href="#" onClick={(e) => navigate('/Home')} className="brand-link">
+                <span href="#" onClick={(e) => navigate('/Home')} className="brand-link span-cursor">
                     <img src="../../CSS/img/logo.png" alt="AdminLTE Logo" className="brand-image img-circle elevation-3" style={{ opacity: '.8' }} />
                     <span className="brand-text font-weight-light">Admin</span>
-                </a>
+                </span>
                 {/* Sidebar */}
                 <div className="sidebar">
                     {/* Sidebar user (optional) */}
@@ -90,48 +91,48 @@ function SideBar() {
                             </li> */}
                             {/* =========================================================== PUBLICIZE RESEARCH ======================================================================================== */}
                             <li className="nav-item has-treeview">
-                                <a href="#" onClick={(e) => navigate('/Admin-public')} className="nav-link">
+                                <span onClick={(e) => navigate('/Admin-public')} className="nav-link span-cursor">
                                     <i className="nav-icon fas fa-copy" />
                                     <p>
                                         R & E Programs
                                     </p>
-                                </a>
+                                </span>
                             </li>
                             {/* =========================================================== RESEARCH WORKS ======================================================================================== */}
                             <li className="nav-item has-treeview">
-                                <a href="#" onClick={(e) => navigate('/Admin-all-RorE')} className="nav-link">
+                                <span onClick={(e) => navigate('/Admin-all-RorE')} className="nav-link span-cursor">
                                     <i className="nav-icon fas fa-copy" />
                                     <p>
                                         R & E Works
                                     </p>
-                                </a>
+                                </span>
                             </li>
                             {/* =========================================================== Chairperson AccountS ======================================================================================== */}
                             <li className="nav-item has-treeview">
-                                <a href="#" onClick={(e) => navigate('/Admin-unit-head')} className="nav-link">
+                                <span onClick={(e) => navigate('/Admin-unit-head')} className="nav-link span-cursor">
                                     <i className="nav-icon fas fa-users" />
                                     <p>
                                         Unit Head Account
                                     </p>
-                                </a>
+                                </span>
                             </li>
                             {/* =========================================================== CHAIRPERSON ACCOUNTS ======================================================================================== */}
                             <li className="nav-item has-treeview">
-                                <a href="#" onClick={(e) => navigate('/Admin-chairperson')} className="nav-link">
+                                <span onClick={(e) => navigate('/Admin-chairperson')} className="nav-link span-cursor">
                                     <i className="nav-icon fas fa-users" />
                                     <p>
                                         Chairperson Accounts
                                     </p>
-                                </a>
+                                </span>
                             </li>
                             {/* =========================================================== AUTHOR ACCOUNTS ======================================================================================== */}
                             <li className="nav-item has-treeview">
-                                <a href="#" onClick={(e) => navigate('/Admin-author')} className="nav-link">
+                                <span onClick={(e) => navigate('/Admin-author')} className="nav-link span-cursor">
                                     <i className="nav-icon fas fa-users" />
                                     <p>
                                         Author Accounts
                                     </p>
-                                </a>
+                                </span>
                             </li>
                         </ul></nav>
                     {/* /.sidebar-menu */}
